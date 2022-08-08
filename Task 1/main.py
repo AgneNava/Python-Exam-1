@@ -27,3 +27,11 @@ has_dog = [d for d in users if filter_dog_owners(d)]
 
 print(has_dog)
 
+# 2:
+
+def filter_adults(y):
+  return y['age'] >= 18
+
+adults = [d for d in users if filter_adults(d)]
+
+print(adults)
