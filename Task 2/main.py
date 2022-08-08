@@ -28,3 +28,12 @@ def get_user_average_age(x):
 
 average_age = get_user_average_age(users)
 print(average_age)
+
+
+# 2:
+
+def get_users_names(y):
+  names_list = [item['name'] for item in y if 'name' in item]
+  return sorted(names_list)
+  
+print(get_users_names(users))
