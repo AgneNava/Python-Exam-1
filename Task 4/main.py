@@ -19,13 +19,13 @@ class Movie:
     return f'(Pavadinimas: {self.title}, rezisierius: {self.director}, biudzetas: {self.budget} Eur)'  
 
   def was_expensive(self):
-    if self.budget > 100000:
+    if self.budget > 100000000:
       return True
     else:
       return False
 
 movie1 = Movie('Verge Izaura', 'Oskaras Korsunovas', 2000)
-movie2 = Movie('Zmogus Voras', 'Spielbergas', 100001)
+movie2 = Movie('Zmogus Voras', 'Spielbergas', 100000001)
 
 print(movie1, movie2)
 print(movie1.was_expensive())
