@@ -14,4 +14,21 @@ def show_object_keys(y):
   a = list(y.values())
   return a
 
-print(show_object_keys(audi))
+#print(show_object_keys(audi))
+
+# Tomo atsakymai
+
+def showObjectKeys(d):
+  return d.values()
+
+print(showObjectKeys(audi))
+
+# 2
+
+def showObjectKeys_2(d):
+  values = []
+  for value in d.values():
+    values.append(value)
+  return values
+
+print(showObjectKeys_2(audi))
