@@ -20,18 +20,84 @@ users = [
 
 # 1:
 
-def filter_dog_owners(x):
-  return x['hasDog'] == True
+# def filter_dog_owners(x):
+#   return x['hasDog'] == True
 
-has_dog = [d for d in users if filter_dog_owners(d)]
+# has_dog = [d for d in users if filter_dog_owners(d)]
 
-print(has_dog)
+# print(has_dog)
 
 # 2:
 
-def filter_adults(y):
-  return y['age'] >= 18
+# def filter_adults(y):
+#   return y['age'] >= 18
 
-adults = [d for d in users if filter_adults(d)]
+# adults = [d for d in users if filter_adults(d)]
 
-print(adults)
+# print(adults)
+
+# Tomo atsakymai:
+
+# Pirmas variantas
+
+# def filterDogOwners(user_list):
+#   dog_owners = []
+#   for user in user_list:
+#     if user['hasDog'] == True:
+#       dog_owners.append(user)
+#   return dog_owners
+
+
+# def filterAdults(user_list):
+#   adults = []
+#   for user in user_list:
+#     if user['age'] >= 18:
+#       adults.append(user)
+#   return adults
+
+# print(filterDogOwners(users))
+# print(filterAdults(users))
+
+# Antras variantas
+
+# def filterDogOwners_2(user_list):
+#   dog_owners = [user for user in user_list if user['hasDog'] == True]
+#   return dog_owners
+
+# def filterAdults_2(user_list):
+#   adults = [user for user in user_list if user['age'] >= 18]
+#   return adults
+
+# print(filterDogOwners_2(users))
+# print(filterAdults_2(users))
+
+# Trecias variantas:
+
+def is_dog_owner(user):
+  # if user['hasDog'] == True:
+  #   return True
+  # else:
+  #   return False
+  return user['hasDog']
+
+def filterDogOwners_3(user_list):
+  # dog_owners = filter(is_dog_owner, user_list)
+  dog_owners = filter(lambda user: user['hasDog'], user_list)
+  return list(dog_owners)
+
+def is_adult(user):
+  if user['age'] >= 18:
+    return True
+  else:
+    return False
+
+def filterAdults_3(user_list):
+  # adults = filter(is_adult, user_list)
+  adults = filter(lambda user: user['age'] >= 18, user_list)
+  return list(adults)
+
+print(filterDogOwners_3(users))
+print(filterAdults_3(users))
+
+
+
