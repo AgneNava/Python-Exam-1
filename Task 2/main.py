@@ -81,6 +81,7 @@ def getUsersAverageAge_3(user_list):
 
 def getUsersNames_3(user_list):
   names = map(lambda user: user['name'], user_list)
+  names = map(lambda user: user.get('name', '<NENURODYTAS VARDAS>'), user_list)
   return sorted(names)
 
 #print(getUsersAverageAge_3(users))
